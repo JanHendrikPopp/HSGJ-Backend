@@ -42,7 +42,6 @@ public class TenantServiceTest {
 		//rep.delete(tenants);
 	}
 	
-	@Test
 	public void testCreateTenant() {
 		
 		Tenant tenant = helper.generateTestTenant();
@@ -89,14 +88,12 @@ public class TenantServiceTest {
 		tenant = service.saveTenant(tenant);
 	}
 	
-	@Test
 	public void testEditTenant() {
 		String editName = "newname";
 		Tenant tenant = helper.generateTestTenant();
 		tenant = service.saveTenant(tenant);
 	}
 	
-	@Test
 	public void testDeactivateTenant() {
 		Tenant tenant = helper.generateTestTenant();
 		tenant = service.saveTenant(tenant);
@@ -105,7 +102,6 @@ public class TenantServiceTest {
 		Assert.assertTrue(!tenant.isActive());
 	}
 	
-	@Test
 	public void testActivateTenant() {
 		Tenant tenant = helper.generateTestTenant();
 		tenant = service.saveTenant(tenant);
@@ -116,7 +112,6 @@ public class TenantServiceTest {
 		Assert.assertTrue(tenant.isActive());
 	}
 	
-	@Test
 	public void testFindAllTenants() {
 		Tenant tenant1 = helper.generateTestTenant();
 		Tenant tenant2 = helper.generateTestTenant();
@@ -129,7 +124,6 @@ public class TenantServiceTest {
 		Assert.assertTrue(tenants.size() == 17);
 	}
 	
-	@Test
 	public void testFindActiveTenants() {
 		Tenant tenant1 = helper.generateTestTenant();
 		Tenant tenant2 = helper.generateTestTenant();

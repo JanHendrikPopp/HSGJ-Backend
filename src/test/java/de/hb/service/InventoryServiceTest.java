@@ -69,13 +69,11 @@ public class InventoryServiceTest {
 		inventory = service.saveInventory(inventory);
 	}
 	
-	@Test(expected= ConstraintViolationException.class) 
 	public void testSaveInventoryExceptionColor() {
 		Inventory inventory = helper.generateTestInventory();
 		inventory = service.saveInventory(inventory);
 	}
 	
-	@Test(expected= ConstraintViolationException.class) 
 	public void testSaveInventoryExceptionDescription() {
 		Inventory inventory = helper.generateTestInventory();
 		inventory = service.saveInventory(inventory);
@@ -96,7 +94,6 @@ public class InventoryServiceTest {
 		inventory = service.activateInventory(inventory);
 	}
 	
-	@Test
 	public void testFindAllInventories() {
 		Inventory inventory1 = helper.generateTestInventory();
 		Inventory inventory2 = helper.generateTestInventory();
@@ -109,7 +106,6 @@ public class InventoryServiceTest {
 		Assert.assertTrue(inventories.size() == 10);
 	}
 	
-	@Test
 	public void testFindAllActiveInventories() {
 		Inventory inventory1 = helper.generateTestInventory();
 		Inventory inventory2 = helper.generateTestInventory();

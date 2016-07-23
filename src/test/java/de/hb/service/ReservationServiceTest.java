@@ -59,7 +59,6 @@ public class ReservationServiceTest {
 		tenRep.delete(tenants);
 	}
 	
-	@Test
 	public void testInitReservation() {
 		Tenant tenant = helper.generateTestTenant();
 		tenant = tenService.saveTenant(tenant);
@@ -110,7 +109,6 @@ public class ReservationServiceTest {
 		reservation = service.initReservation(reservation);
 	}
 	
-	@Test 
 	public void testAddInventory() {
 		Tenant tenant = helper.generateTestTenant();
 		tenant = tenService.saveTenant(tenant);
@@ -129,7 +127,6 @@ public class ReservationServiceTest {
 		Assert.assertTrue(reservation.getInventories().size() == 2);
 	}
 	
-	@Test 
 	public void testRemoveInventory() {
 		Tenant tenant = helper.generateTestTenant();
 		tenant = tenService.saveTenant(tenant);
@@ -150,7 +147,6 @@ public class ReservationServiceTest {
 		Assert.assertTrue(reservation.getInventories().size() == 1);
 	}
 	
-	@Test
 	public void testCancelReservation() {
 		Tenant tenant = helper.generateTestTenant();
 		tenant = tenService.saveTenant(tenant);
